@@ -86,7 +86,7 @@ const config = {
             position: 'right',
           },
           {
-            to: 'https://linkedin.com/diegorj',
+            to: 'https://linkedin.com/in/diegorj',
             label: 'LinkedIn💼',
             position: 'right',
           },
