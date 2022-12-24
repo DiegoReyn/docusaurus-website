@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Diego Reynoso',
-  tagline: 'B.S. Computer Science',
+  tagline: '🎓 B.S. Computer Science',
   url: 'https://reynoso.dev',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -66,7 +66,7 @@ const config = {
         },
         items: [
           {
-            to: '/docs/hello',
+            to: '/docs/intro',
             id: 'docs',
             activeBaseRegex: `/docs/`,
             position: 'left',
@@ -78,6 +78,16 @@ const config = {
             activeBaseRegex: `/notes/`,
             label: 'Notes', 
             position: 'left'
+          },
+          {
+            to: 'https://github.com/DiegoReyn',
+            label: 'GitHub🐙',
+            position: 'right',
+          },
+          {
+            to: 'https://linkedin.com/diegorj',
+            label: 'LinkedIn💼',
+            position: 'right',
           },
           {
             href: 'https://reynoso.dev/DiegoReynosoResume.pdf',
