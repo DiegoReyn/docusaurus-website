@@ -1,0 +1,78 @@
+---
+sidebar_label: '242. Valid Anagram'
+sidebar_position: 2
+---
+
+# [242. Valid Anagram](https://leetcode.com/problems/valid-anagram/)
+
+Given two strings <code>s</code> and <code>t</code>, return <code>true</code> if <code>t</code> is an anagram of s, and false otherwise.
+
+An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
+
+# Solution
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs>
+<TabItem value="Manual" default>
+
+```py showLineNumbers
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        if len(s) != len(t):
+            return False
+        
+        sc, tc = {}, {}
+        for idx in range(len(s)):
+            sc[s[idx]] = 1 + sc.get(s[idx], 0)
+            tc[t[idx]] = 1 + tc.get(t[idx], 0)
+        return sc == tc
+```
+
+
+</TabItem>
+
+<TabItem value="defaultdict()">
+
+```py showLineNumbers
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        if len(s) != len(t):
+            return False
+        
+        sc, tc = defaultdict(int), defaultdict(int)
+        for idx in range(len(s)):
+            sc[s[idx]] += 1
+            tc[t[idx]] += 1
+        return sc == tc
+```
+
+</TabItem>
+
+<TabItem value="Counter()">
+
+```py showLineNumbers
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        sc = Counter(s)
+        tc = Counter(t)
+        return sc == tc
+```
+
+</TabItem>
+</Tabs>
+
+Time Complexity: **O(n)**, where n is the length of the strings
+
+Space Complexity: **O(n)**, where n is the length of the strings
+
+# Explanation
+
+The idea is to check that the frequency of any given letter is equal across both input strings.
+
+This can be done manually, as can be seen in the first tab, by simply traversing the strings at the same time and updating a frequency dictionary for each as you go.
+
+The code can be made simpler by using "defaultdict(int)" instead of "{}" to make the assignment on the dictionary editing lines 8 & 9 "+=1".
+
+Another approach is to use the Counter() function on both input strings and then simply compare the dictionaries containing the frequencies. However, this might not be allowed.
