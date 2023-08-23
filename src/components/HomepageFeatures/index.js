@@ -18,8 +18,8 @@ const FeatureList = [
     //Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        I'm a recent Computer Science graduate currently looking for a job. 
-        Please check out my <a href="https://reynoso.dev/DiegoReynosoResume.pdf">resume</a>!
+        I'm a computer science graduate student at Georgia Tech and currently work as a software engineer for Raytheon. 
+        Please feel free to connect with me on <a href="https://www.linkedin.com/in/diegorj/">LinkedIn</a>!
       </>
     ),
   },

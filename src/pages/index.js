@@ -16,11 +16,12 @@ function HomepageHeader() {
         <img src={logo} style={{width: 280, borderRadius: '50%'}}/>
         <h1 className="hero__title">{siteConfig.title}</h1>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <p className="hero__subtitle">👨‍💻 Software Engineer I</p>
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
             to="/docs/intro">
-            Projects 👨‍💻
+            Projects 🛠
           </Link>
           <Link
             className="button button--secondary button--lg"
